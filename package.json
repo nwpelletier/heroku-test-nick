@@ -24,7 +24,7 @@
   "description": "trying to practice/learn oauth ",
   "main": "index.js",
   "scripts": {
-    "start-client": "cd client && start-client",
+    "start-client": "cd client && npm start-client",
     "build": "cd client && npm run build",
     "start": "cd server && npm start",
     "test": "cd client && test",
