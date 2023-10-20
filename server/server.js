@@ -5,6 +5,7 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config();
 const session = require("express-session");
+const path = require("path");
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -20,16 +21,20 @@ const userpage = require("./routes/PostUserRoutes");
 const storage = multer.memoryStorage()
 const upload = multer({ storage: storage })
 
+// Hosting!
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
+
 
 
 app.use(express.json({ limit: "50mb" }));
-app.use(
-  cors({
-    origin: ["http://localhost:3000"],
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["http://localhost:3000"],
+//     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+//     credentials: true,
+//   })
+// );
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(

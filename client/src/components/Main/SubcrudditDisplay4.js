@@ -5,7 +5,7 @@ import Post from '../Post/Post';
 import { formatDistance } from 'date-fns';
 import { ModContext } from '../../pages/Subcruddit';
 export const SubcrudditContext = createContext();
-import { BASE_API_URL } from '../../utils/constants';
+import { BASE_API_URL } from '../../utils/constant';
 function SubcrudditDisplay({ subcrudditName, sortingType }) {
 
   const [posts, setPosts] = useState([]);
@@ -29,11 +29,11 @@ function SubcrudditDisplay({ subcrudditName, sortingType }) {
         let response;
         if (subcrudditName === 'all') {
           response = await axios.get(
-            BASE_API_URL+`/api/posts/posts/${sortingType}`
+            BASE_API_URL + `/api/posts/posts/${sortingType}`
           );
         } else {
           response = await axios.get(
-            BASE_API_URL+`/api/posts/posts/${subcrudditName}/${sortingType}`
+            BASE_API_URL + `/api/posts/posts/${subcrudditName}/${sortingType}`
           );
         }
         setPosts(response.data);

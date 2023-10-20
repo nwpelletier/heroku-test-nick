@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import SubcrudditDisplay from './SubcrudditDisplay';
 import PostDisplay from './PostDisplay';
-import { BASE_API_URL } from '../../utils/constants';
+
 export const ContentTypeContext = React.createContext();
 
 function Main({ handle, sortingType }) {

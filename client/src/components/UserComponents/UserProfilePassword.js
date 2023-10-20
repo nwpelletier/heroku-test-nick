@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik, Field, ErrorMessage, Form } from "formik";
-import { BASE_API_URL } from '../../utils/constants';
+
 function UserProfilePassword(userId) {
   return (
     <>

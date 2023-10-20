@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { BASE_API_URL } from '../../utils/constants';
+
 function RightNavNotLoggedIn() {
   
   return (

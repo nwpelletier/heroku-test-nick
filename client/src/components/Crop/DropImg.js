@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { Formik, Field, ErrorMessage, withFormik, formikProps, setFieldValue } from 'formik';
 import cardImage from '../../assets/card-image.svg';
-import { BASE_API_URL } from '../../utils/constants';
+
 function DropImg({ open, warning, title, name, formId, formikProps }) {
   const [imageData, setImageData] = useState("");
   const [imgValue, setImgValue] = useState("")

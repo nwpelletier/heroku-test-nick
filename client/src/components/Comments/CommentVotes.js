@@ -1,7 +1,9 @@
-import { BASE_API_URL } from '../../utils/constants';
+
 import { useEffect, useState } from "react";
 import { ArrowUpShort, ArrowDownShort } from 'react-bootstrap-icons';
 import axios from "axios";
+import { BASE_API_URL } from "../../utils/constant";
+
 function CommentVotes({userLiked, setUserLiked, comment, commentPoints, setCommentPoints}) {
 
     const vote = (value) => {
@@ -9,7 +11,7 @@ function CommentVotes({userLiked, setUserLiked, comment, commentPoints, setComme
         const userId = localStorage.getItem("userId")
         if (userId) {
             axios
-            .post(BASE_API_URL+`/api/votes/${comment.id}`, value, {
+            .post( BASE_API_URL + `/api/votes/${comment.id}`, value, {
                 headers: {
                   'x-access-token': localStorage.getItem("token")
                 }

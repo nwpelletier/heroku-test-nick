@@ -4,7 +4,8 @@ import arrowDownImage from "../../assets/arrow-square-down-svgrepo-com.svg";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { format } from "date-fns";
-import { BASE_API_URL } from '../../utils/constants';
+import { BASE_API_URL } from "../../utils/constant";
+
 function UserCommentsTab(user) {
   //console.log("USER:", user);
   let userId = user.UserID;
@@ -14,7 +15,7 @@ function UserCommentsTab(user) {
   useEffect(() => {
     try {
       axios
-        .get(BASE_API_URL+`/api/overview/${userId}`)
+        .get(BASE_API_URL + `/api/overview/${userId}`)
         .then((response) => {
           setPosts(response.data);
           //console.log(response.data);

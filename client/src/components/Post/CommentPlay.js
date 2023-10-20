@@ -1,5 +1,5 @@
 import PostComments from "./PostComments";
-import { BASE_API_URL } from '../../utils/constants';
+
 function CommentPlay(){
 
 const newOrder = "new"
@@ -7,7 +7,7 @@ const newOrder = "new"
         <PostComments
         order={newOrder}
         postId={3}
-        display={true}
+       
          />
     )
 

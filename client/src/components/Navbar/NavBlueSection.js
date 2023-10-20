@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Modal from '../Modal/Modal';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { BASE_API_URL } from '../../utils/constants';
+import { BASE_API_URL } from '../../utils/constant';
+
 
 function LowerHalf() {
   const [modalContent, setModalContent] = useState('');
@@ -16,7 +17,7 @@ function LowerHalf() {
   const getKarma = async () => {
     try {
       
-      const response = await fetch(BASE_API_URL+`/api/users/karma/${userId}`);
+      const response = await fetch(BASE_API_URL + `/api/users/karma/${userId}`);
       const data = await response.json();
       const postKarma = parseInt(data.postKarma, 10);
       const commentKarma = parseInt(data.commentKarma, 10);

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Field, ErrorMessage } from 'formik';
-import { BASE_API_URL } from '../../utils/constants';
+
 function CategoryFields(props) {
     const { title, warning, formName, formStyle, formId, formType, rows, lineHeight, onBlurWarning, onBlurFunction, value } = props;
     const [subcrudditExists, setSubcrudditExists] = useState()

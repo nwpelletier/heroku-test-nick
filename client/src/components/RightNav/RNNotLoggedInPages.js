@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import RightNavNotLoggedIn from "./RightNavNotLoggedIn";
 import { useLocation } from "react-router-dom";
 import { ModContext } from '../../pages/Subcruddit';
-import { BASE_API_URL } from '../../utils/constants';
+
 function RNNotLoggedInPages(margin) {
 
   // Verifying mod status!
