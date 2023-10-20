@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
 import axios from 'axios';
-
+import { BASE_API_URL } from '../../utils/constants';
 
    export const postType = "text"
    export const  btnText = "Create Post"
@@ -18,7 +18,7 @@ import axios from 'axios';
    export const  postForm = (data) => {
     console.log(data)
     axios
-    .post(`http://localhost:8080/api/posts/text`, data, {
+    .post(BASE_API_URL+`/api/posts/text`, data, {
       headers: {
         'x-access-token': localStorage.getItem("token")
       }
@@ -34,7 +34,7 @@ import axios from 'axios';
    const onBlurCheck =  (data) => {
     console.log(data + " my data")
     return axios
-    .get(`http://localhost:8080/api/subcruddits/exists/` + data)
+    .get(BASE_API_URL+`/api/subcruddits/exists/` + data)
     .then((response) => {
       return response.data
     })

@@ -3,7 +3,7 @@ import UserCommentsTab from "./UserCommentsTab";
 import UserOverview from "./UserOverview";
 import UserSubmitted from "./UserSubmitted";
 import Logo from "../../assets/reddit-logo.svg";
-
+import { BASE_API_URL } from '../../utils/constants';
 function UserNav() {
   const [showComments, setShowComments] = useState(false);
   const [showOverview, setShowOverview] = useState(true);

@@ -1,6 +1,8 @@
 import axios from 'axios';
 import * as Yup from 'yup';
+import { BASE_API_URL } from '../../utils/constants';
 const FormData = require('form-data');
+
 
 
 export const postType = "image"
@@ -25,7 +27,7 @@ export const formInitValues = {
 //     console.log(data)
 
 //     axios
-//     .post(`http://localhost:8080/api/posts/post/`, data, config)
+//     .post(BASE_API_URL+`/api/posts/post/`, data, config)
 //     .then((response) => {
       
 //       console.log(response.data)
@@ -52,7 +54,7 @@ export const postForm = (data) => {
       };
   
     axios
-      .post(`http://localhost:8080/api/posts/image`, formData, {headers:headers})
+      .post(BASE_API_URL+`/api/posts/image`, formData, {headers:headers})
       .then((response) => {
         console.log(response.data);
       })
@@ -69,7 +71,7 @@ export const postForm = (data) => {
 const onBlurCheck =  (data) => {
     console.log(data + " my data")
     return axios
-    .get(`http://localhost:8080/api/subcruddits/exists/` + data)
+    .get(BASE_API_URL+`/api/subcruddits/exists/` + data)
     .then((response) => {
       return response.data
     })

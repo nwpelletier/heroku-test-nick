@@ -23,7 +23,7 @@ function App() {
     })
 
     const login = (data) => {
-        axios.post(`http://localhost:8080/api/users/login`, data)
+        axios.post(BASE_API_URL+`/api/users/login`, data)
         .then((response) => {
             console.log(response)
             if (response.data.auth === true) {

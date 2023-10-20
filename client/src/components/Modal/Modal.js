@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from './Login';
 import SignUp from './SignUp';
-
+import { BASE_API_URL } from '../../utils/constants';
 // Using props passed down from LowerHalf
 function Modal({ content, setModalContent }) {
 

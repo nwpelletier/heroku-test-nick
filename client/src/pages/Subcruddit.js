@@ -22,7 +22,7 @@ function Subcruddit() {
         } else {
           const userId = localStorage.getItem('userId');
           const response = await axios.get(
-            `http://localhost:8080/api/moderators/ismod/${handle}`, {
+            BASE_API_URL+`/api/moderators/ismod/${handle}`, {
               headers: {
                 'x-access-token' : localStorage.getItem('token')
               }

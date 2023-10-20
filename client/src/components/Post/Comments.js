@@ -5,7 +5,7 @@ import EditComment from "./EditComment";
 import { format } from "date-fns";
 import CommentVotes from "../Comments/CommentVotes";
 import axios from "axios";
-
+import { BASE_API_URL } from '../../utils/constants';
 
 function Comments(props){
     const {comment, order, points, display, setChildrenShow, childrenShow } = props;
@@ -41,7 +41,7 @@ function Comments(props){
        }
         if (userId) {
             axios
-            .get(`http://localhost:8080/api/votes/${comment.id}/${userId}`)
+            .get(BASE_API_URL+`/api/votes/${comment.id}/${userId}`)
             .then((response) => {
               setUserLiked(response.data);
             })

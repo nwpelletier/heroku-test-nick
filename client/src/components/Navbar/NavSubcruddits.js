@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-
+import { BASE_API_URL } from '../../utils/constants';
 function NavSubcruddits() {
   const [subcruddits, setSubcruddits] = useState([]);
 

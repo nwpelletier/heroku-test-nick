@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import UserProfileEmail from "./UserProfileEmail";
 import UserProfilePassword from "./UserProfilePassword";
 import Logo from "../../assets/reddit-logo.svg";
-
+import { BASE_API_URL } from '../../utils/constants';
 function UserProfileNav() {
   const userID = 2;
 

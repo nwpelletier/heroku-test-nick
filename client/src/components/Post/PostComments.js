@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Comments from './Comments';
-
+import { BASE_API_URL } from '../../utils/constants';
 function PostComments({ order, postId, display }) {
   const [comments, setComments] = useState([]);
   const [childrenShow, setChildrenShow] = useState(display)
@@ -17,7 +17,7 @@ function PostComments({ order, postId, display }) {
 
 
     axios
-      .get(`http://localhost:8080/api/posts/comments/${order}/${postId}`)
+      .get(BASE_API_URL+`/api/posts/comments/${order}/${postId}`)
       .then((response) => {
         
         setComments(response.data);
